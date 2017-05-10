@@ -3,8 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ui", "Ui", "{B89CEFEF-D6F6-4503-82D4-0FB66B523DAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{C3FE8D07-7AD4-4EC2-91A0-CAD03B051274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorySystem.Ui", "Ui\InventorySystem.Ui\InventorySystem.Ui.csproj", "{47FE41C6-0E69-491B-89CE-0D104BF5AFFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorySystem.Data", "Data\InventorySystem.Data\InventorySystem.Data.csproj", "{4AA0B2BE-749B-4086-B9A5-25A7A3E2749B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47FE41C6-0E69-491B-89CE-0D104BF5AFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47FE41C6-0E69-491B-89CE-0D104BF5AFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47FE41C6-0E69-491B-89CE-0D104BF5AFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47FE41C6-0E69-491B-89CE-0D104BF5AFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA0B2BE-749B-4086-B9A5-25A7A3E2749B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA0B2BE-749B-4086-B9A5-25A7A3E2749B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA0B2BE-749B-4086-B9A5-25A7A3E2749B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA0B2BE-749B-4086-B9A5-25A7A3E2749B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{47FE41C6-0E69-491B-89CE-0D104BF5AFFF} = {B89CEFEF-D6F6-4503-82D4-0FB66B523DAC}
+		{4AA0B2BE-749B-4086-B9A5-25A7A3E2749B} = {C3FE8D07-7AD4-4EC2-91A0-CAD03B051274}
 	EndGlobalSection
 EndGlobal
