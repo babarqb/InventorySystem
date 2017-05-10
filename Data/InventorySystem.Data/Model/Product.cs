@@ -5,24 +5,24 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace InventorySystem.Data.Model
 {
     public class Product
-    {   
+    {
+        
         [Key]
-        public int ProductId { get; set; }
-        public string ProductType { get; set; }
-        public string ProductModel { get; set; }
+        public  int ProductId { get; set; }
+        public  string ProductType { get; set; }
+        public  string ProductModel { get; set; }
         [ForeignKey("BrandId")]
-        public Brand Brand { get; set; }
-        public int BrandId { get; set; }
+        public virtual Brand Brand { get; set; } = new Brand();
+        public  int BrandId { get; set; }
         [ForeignKey("CategoryId")]
-        public Category Category { get; set; }
-        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; } = new Category();
         [ForeignKey("VendorId")]
-        public Vendor Vendor { get; set; }
-        public int VendorId { get; set; }
-        public decimal ProductPurchasePrice { get; set; }
-        public bool ProductIsInStock { get; set; }
-        public int ProductStockLevel { get; set; }
-        public DateTime ProductPurchaseDate { get; set; }
+        public virtual Vendor Vendor { get; set; } = new Vendor();
+        public  int VendorId { get; set; }
+        public  decimal ProductPurchasePrice { get; set; }
+        public  bool ProductIsInStock { get; set; }
+        public  int ProductStockLevel { get; set; }
+        public virtual DateTime ProductPurchaseDate { get; set; }
 
 
     }

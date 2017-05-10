@@ -8,9 +8,10 @@ using InventorySystem.Data;
 namespace InventorySystem.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170510030801_AlterProductModel")]
+    partial class AlterProductModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
@@ -47,7 +48,7 @@ namespace InventorySystem.Data.Migrations
 
                     b.Property<int>("BrandId");
 
-                    b.Property<int?>("CategoryId");
+                    b.Property<int>("CategoryId");
 
                     b.Property<bool>("ProductIsInStock");
 
@@ -93,13 +94,14 @@ namespace InventorySystem.Data.Migrations
             modelBuilder.Entity("InventorySystem.Data.Model.Product", b =>
                 {
                     b.HasOne("InventorySystem.Data.Model.Brand", "Brand")
-                        .WithMany("Products")
+                        .WithMany()
                         .HasForeignKey("BrandId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("InventorySystem.Data.Model.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryId");
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("InventorySystem.Data.Model.Vendor", "Vendor")
                         .WithMany()

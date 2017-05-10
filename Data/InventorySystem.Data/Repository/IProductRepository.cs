@@ -7,7 +7,8 @@ namespace InventorySystem.Data.Repository
 {
     public interface IProductRepository : IRepository<Product>
     {
-        decimal GetProductPurchasePriceTotal(int id);
-        IEnumerable<Product> FindProductsOutOfStock(Expression<Func<Product>> predicate);
+        decimal GetProductPurchasePriceTotal();
+        IEnumerable<Product> FindProductsOutOfStock(Expression<Func<Product,bool>> predicate);
+        IEnumerable<Product> GetAllProducts();
     }
 }
